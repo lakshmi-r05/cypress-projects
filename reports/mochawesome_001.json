@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-01-01T15:27:51.213Z",
+    "end": "2025-01-01T15:28:48.589Z",
+    "duration": 57376,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "fcdc28c2-4be0-47d0-855f-e07406514c3d",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Practiceform.js",
+      "file": "cypress\\e2e\\Practiceform.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f2f3112f-3670-4c06-b8ee-542475f2016c",
+          "title": "practiceform",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "practiceformtest",
+              "fullTitle": "practiceform practiceformtest",
+              "timedOut": null,
+              "duration": 50579,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://demoqa.com/automation-practice-form', {\n  timeout: 120000\n});\ncy.get('#firstName').type('John');\ncy.get('#firstName').should('have.value', 'John');\ncy.get('#lastName').type(\"Test12\");\ncy.get('#userEmail').type(\"example@example.com\");\n//cy.get('label.custom-control-label::after').click();",
+              "err": {},
+              "uuid": "9bd7c05e-cfb5-4ac4-9b9e-4d4ceb3c6af8",
+              "parentUUID": "f2f3112f-3670-4c06-b8ee-542475f2016c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9bd7c05e-cfb5-4ac4-9b9e-4d4ceb3c6af8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 50579,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

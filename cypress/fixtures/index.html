@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cypress Stub Example</title>
+</head>
+<body>
+  <h1>User Info</h1>
+  <button id="fetch-user">Fetch User</button>
+  <div id="user-data" style="margin-top: 20px;">
+    <!-- User data will appear here -->
+  </div>
+
+  <script>
+    document.getElementById('fetch-user').addEventListener('click', () => {
+      fetch('/users')
+        .then((response) => response.json())
+        .then((data) => {
+          const userDiv = document.getElementById('user-data');
+          userDiv.innerHTML = `
+            <p><strong>Name:</strong> ${data.name}</p>
+            <p><strong>Email:</strong> ${data.email}</p>
+          `;
+        })
+        .catch((error) => {
+          document.getElementById('user-data').textContent = 'Error fetching user data';
+        });
+    });
+  </script>
+</body>
+</html>

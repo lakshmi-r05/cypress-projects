@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-12-30T08:42:03.840Z",
+    "end": "2024-12-30T08:42:23.113Z",
+    "duration": 19273,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4b9e83fc-589c-414d-b5ec-26591b4aca1c",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Myfirstcode_spec.js",
+      "file": "cypress\\e2e\\Myfirstcode_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "732a32b0-59ee-4ff1-ba8e-93fd41978412",
+          "title": "Myfirstcode",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "gmaillogin",
+              "fullTitle": "Myfirstcode gmaillogin",
+              "timedOut": null,
+              "duration": 13328,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "//  cy.visit('https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&emr=1&followup=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&ifkv=AeZLP99SOKZa7-HXVX9PC9Ydkn0_9SYowW6MzhncBGsFChXC-JLR-I2DJRAsgSeC_Kx5RY8EzBzKLA&osid=1&passive=1209600&service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1105423439%3A1735379700648519&ddm=1');\n// cy.intercept('POST', 'https://accounts.google.com/*', {\n//statusCode: 200,\n//body: { token: 'mocked-token' },\n//}).as('mockLogin');\ncy.visit('https://accounts.google.com/signin');\n// cy.wait(2000);\n// cy.get('input[type=\"email\"]').click();\ncy.get('input[type=\"email\"]').type(\"lakshmi.ravishankaran@gmail.com\");\ncy.get('#identifierNext').click();\n// cy.wait(1000);\n// cy.get('div.VfPpkd-RLmnJb').eq(1).click({force:true});\n// cy.wait(4000);\n//  cy.get('input[type=\"password\"]').type(\"Saibaba01!\");\n//  cy.get('input[type=\"password\"]', { timeout: 10000 }).should('be.visible');\n//  cy.get('input[type=\"password\"]').type('Saibaba01!', { log: false }); // Avoid logging sensitive data\n//  cy.get('#passwordNext').click();\n// cy.get('div span.VfPpkd-vQzf8d').click({force:true});\ncy.url().should('include', 'mail.google.com');\ncy.get('div[role=\"main\"]').should('contain.text', 'Inbox');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected 'https://accounts.google.com/v3/signin/rejected?checkConnection=youtube:1550&checkedDomains=youtube&dsh=S-1979030786:1735548131786881&epd=AW5di2o3WX5QJKHEeqpScWfaCTIomD3S3XawpaVNlTEWYvTb4AgpBf9nIA&flowEntry=ServiceLogin&flowName=WebLiteSignIn&idnf=lakshmi.ravishankaran@gmail.com&ifkv=AeZLP9-j1a2vLjDcgImHyRovmxm84we92L4vaQbbqaZrW7isK3zH6T0WfE6urOUXPPSf3Tee9jOSPg&pstMsg=1&rhlk=le&rrk=46' to include 'mail.google.com'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected 'https://accounts.google.com/v3/signin/rejected?checkConnection=youtube:1550&checkedDomains=youtube&dsh=S-1979030786:1735548131786881&epd=AW5di2o3WX5QJKHEeqpScWfaCTIomD3S3XawpaVNlTEWYvTb4AgpBf9nIA&flowEntry=ServiceLogin&flowName=WebLiteSignIn&idnf=lakshmi.ravishankaran@gmail.com&ifkv=AeZLP9-j1a2vLjDcgImHyRovmxm84we92L4vaQbbqaZrW7isK3zH6T0WfE6urOUXPPSf3Tee9jOSPg&pstMsg=1&rhlk=le&rrk=46' to include 'mail.google.com'\n    at Context.eval (webpack://cypress-project/./cypress/e2e/Myfirstcode_spec.js:23:14)",
+                "diff": null
+              },
+              "uuid": "8178d5fe-38dc-4a67-8dc8-5e6d76caf4a2",
+              "parentUUID": "732a32b0-59ee-4ff1-ba8e-93fd41978412",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "8178d5fe-38dc-4a67-8dc8-5e6d76caf4a2"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 13328,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "reports overwrite=false html=true json=true"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
