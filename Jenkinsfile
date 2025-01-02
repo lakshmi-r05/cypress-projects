@@ -1,10 +1,10 @@
 pipeline
 {
   agent any
-  tools{nodejs "nodejs23"}
+  tools{nodejs "nodejs23.5"}
 
   stages{
-    stages('Dependencies'){
+    stage('Dependencies'){
       steps{
         sh npm 'i'
       }
