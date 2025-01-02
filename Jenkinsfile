@@ -4,7 +4,7 @@ pipeline
   tools{nodejs "nodejs23"}
 
   stages{
-    stages{'Dependencies'){
+    stages('Dependencies'){
       steps{
         sh npm 'i'
       }
